@@ -1,0 +1,94 @@
+@import '../css/body.css';
+
+.container {
+    display: flex;
+    gap: 60px;
+    width: 70%;
+    margin: auto;
+    margin-top: 200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: 1s;
+}
+main > div {
+    width: 220px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.svg-bg {
+    background-color: #70C0C9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px gray;
+    position: relative;
+}
+.svg-bg::before {
+    content: '1';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background-color: white;
+    color: #70C0C9;
+    border: 3px solid #70C0C9;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+.svg-bg.two {
+    background-color: #4074BD;
+}
+.svg-bg.two::before {
+    content: '2';
+    color: #4074BD;
+    border-color: #4074BD;
+}
+.svg-bg.three {
+    background-color: #E05E46;
+}
+.svg-bg.three::before {
+    content: '3';
+    color: #E05E46;
+    border-color: #E05E46;
+}
+.svg-bg.four {
+    background-color: #919191;
+}
+.svg-bg.four::before {
+    content: '4';
+    color: #919191;
+    border-color: #919191;
+}
+.imger {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(87deg) brightness(119%) contrast(119%);
+    height: 160px;
+    width: 160px;
+}
+.headttl {
+    color: #E05E46;
+    text-transform: uppercase;
+    font-size: 26px;
+    line-height: 22px;
+}
+.text {
+    color: #919191;
+    line-height: 25px;
+}
+@media (max-width:1600px) {
+    .container {
+        width: 80%;
+    }
+}
+@media (max-width:850px) {
+    .container {
+        width: 90%;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    .svg-bg::before {
+        display: none;
+    }
+}
